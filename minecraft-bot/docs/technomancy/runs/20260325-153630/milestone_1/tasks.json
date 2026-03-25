@@ -1,0 +1,50 @@
+{
+  "milestone_id": "milestone_1",
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "description": "Add chest-flow helpers and pure stash-planning utilities.",
+      "owner": "technomancer",
+      "inputs": [
+        "spec.md",
+        "index.js",
+        "docs/technomancy/runs/20260325-153630/milestone_1/contracts.md"
+      ],
+      "outputs": [
+        "wood-utils.js",
+        "index.js helper additions"
+      ],
+      "dependencies": [],
+      "may_run_in_parallel": false,
+      "validation_steps": [
+        "node --check index.js",
+        "node --check wood-utils.js"
+      ],
+      "status": "completed"
+    },
+    {
+      "task_id": "task_2",
+      "description": "Wire stash commands, gather/provision/deposit flow, and focused tests.",
+      "owner": "technomancer",
+      "inputs": [
+        "spec.md",
+        "index.js",
+        "wood-utils.js",
+        "docs/technomancy/runs/20260325-153630/milestone_1/contracts.md"
+      ],
+      "outputs": [
+        "index.js stash workflow",
+        "test/wood-utils.test.js",
+        "verification artifacts"
+      ],
+      "dependencies": [
+        "task_1"
+      ],
+      "may_run_in_parallel": false,
+      "validation_steps": [
+        "npm test"
+      ],
+      "status": "completed"
+    }
+  ]
+}

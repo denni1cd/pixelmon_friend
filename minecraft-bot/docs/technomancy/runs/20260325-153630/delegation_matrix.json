@@ -1,0 +1,22 @@
+{
+  "run_id": "20260325-153630",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope": [
+        "stash wood command parsing",
+        "wood gather plus deposit flow",
+        "nearby chest reuse",
+        "chest crafting and placement fallback",
+        "clean failure messaging",
+        "tests and verification notes"
+      ],
+      "can_run_in_parallel": false,
+      "recommended_task_slices": [
+        "Chest discovery and chest provisioning helpers",
+        "Command wiring, stash orchestration, and user-facing errors"
+      ]
+    }
+  ]
+}

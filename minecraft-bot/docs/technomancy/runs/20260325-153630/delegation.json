@@ -1,0 +1,28 @@
+{
+  "run_id": "20260325-153630",
+  "spec_path": "C:\\Users\\Zero\\python_projects\\ai\\pixelmon_friend\\minecraft-bot\\spec.md",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "description": "Implement stash-wood workflow with chest discovery, chest crafting/placement fallback, command wiring, and verification artifacts.",
+      "owner": "high_technomancer",
+      "dependencies": [],
+      "deliverables": [
+        "docs/technomancy/runs/20260325-153630/milestone_1/plan.md",
+        "docs/technomancy/runs/20260325-153630/milestone_1/tasks.json",
+        "docs/technomancy/runs/20260325-153630/milestone_1/contracts.md",
+        "docs/technomancy/runs/20260325-153630/milestone_1/conclave.md",
+        "Production code for stash wood behavior",
+        "Verification notes and task handoffs"
+      ],
+      "parallelism": {
+        "allowed": false,
+        "reason": "The repo centers on one small index.js file and both suggested task slices would overlap heavily in helpers, command routing, and error handling."
+      },
+      "isolation": {
+        "worktree_required": false,
+        "notes": "Single-repo context is acceptable because edits are tightly coupled and low-risk."
+      }
+    }
+  ]
+}

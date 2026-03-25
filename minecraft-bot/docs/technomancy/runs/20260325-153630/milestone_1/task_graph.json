@@ -1,0 +1,48 @@
+{
+  "milestone_id": "milestone_1",
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "description": "Add chest-flow helpers for chest discovery, crafting-table access, plank/chest crafting, and block placement.",
+      "owner": "technomancer",
+      "inputs": [
+        "spec.md",
+        "docs/technomancy/runs/20260325-153630/project_plan.md",
+        "docs/technomancy/runs/20260325-153630/milestone_1/contracts.md",
+        "index.js"
+      ],
+      "outputs": [
+        "production helper logic for chest-flow handling"
+      ],
+      "dependencies": [],
+      "may_run_in_parallel": false,
+      "validation_steps": [
+        "syntax check changed files",
+        "manual review of helper boundaries"
+      ],
+      "status": "authorized"
+    },
+    {
+      "task_id": "task_2",
+      "description": "Wire stash commands, integrate gather-then-stash behavior, deposit logic, and user-facing failures.",
+      "owner": "technomancer",
+      "inputs": [
+        "spec.md",
+        "docs/technomancy/runs/20260325-153630/milestone_1/contracts.md",
+        "index.js"
+      ],
+      "outputs": [
+        "production command and deposit flow"
+      ],
+      "dependencies": [
+        "task_1"
+      ],
+      "may_run_in_parallel": false,
+      "validation_steps": [
+        "syntax check changed files",
+        "focused automated tests"
+      ],
+      "status": "authorized"
+    }
+  ]
+}
