@@ -1,0 +1,23 @@
+{
+  "milestone_id": "milestone_1",
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "title": "Define runtime context, task manager, and capability registry contracts",
+      "outputs": [
+        "shared services modules",
+        "capability loader/lookup",
+        "task manager lifecycle"
+      ]
+    },
+    {
+      "task_id": "task_2",
+      "title": "Move preserved command behavior into capability modules and wire the router",
+      "outputs": [
+        "movement/chat/inventory/wood/drop capabilities",
+        "thin bootstrap entrypoint",
+        "preserved command routing"
+      ]
+    }
+  ]
+}

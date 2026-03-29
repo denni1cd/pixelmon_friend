@@ -1,0 +1,15 @@
+{
+  "milestone": "milestone-3",
+  "tasks": [
+    {
+      "task_id": "m3-t1",
+      "description": "Expose MCP-compatible list/call methods over the shared tool runtime.",
+      "depends_on": ["m1-t1"]
+    },
+    {
+      "task_id": "m3-t2",
+      "description": "Rewire migrated capabilities and maintenance entrypoints to the runtime with regression coverage.",
+      "depends_on": ["m1-t2", "m2-t1"]
+    }
+  ]
+}

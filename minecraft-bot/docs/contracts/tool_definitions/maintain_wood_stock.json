@@ -1,0 +1,72 @@
+{
+  "name": "maintain_wood_stock",
+  "description": "Planner-safe objective wrapper for restocking remembered chest wood.",
+  "category": "objective",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "minimumChestWood": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 64
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned"
+  ],
+  "sideEffects": [
+    "movement",
+    "inventory_change",
+    "container_access"
+  ],
+  "retryPolicy": {
+    "retryable": false,
+    "maxRetries": 0
+  },
+  "errorCodes": [
+    "OBJECTIVE_BLOCKED",
+    "OBJECTIVE_LIMIT_REACHED",
+    "TASK_CANCELLED"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

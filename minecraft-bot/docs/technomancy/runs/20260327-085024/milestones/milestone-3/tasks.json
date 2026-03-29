@@ -1,0 +1,14 @@
+[
+  {
+    "task_id": "m3-t1",
+    "description": "Expose tool-runtime over MCP-compatible calls.",
+    "owner": "technomancer",
+    "status": "completed"
+  },
+  {
+    "task_id": "m3-t2",
+    "description": "Route migrated chat commands and maintenance flow through the runtime.",
+    "owner": "technomancer",
+    "status": "completed"
+  }
+]

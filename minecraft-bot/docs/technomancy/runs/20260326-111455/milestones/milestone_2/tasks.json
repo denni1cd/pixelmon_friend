@@ -1,0 +1,49 @@
+[
+  {
+    "task_id": "task_1",
+    "description": "Implement the cobble gather/deposit workflow and stone-tools upgrade capability, including parser and registry wiring.",
+    "owner": "technomancer",
+    "inputs": [
+      "src/bot/command-parser.js",
+      "src/bot/helpers.js",
+      "src/bot/resource-utils.js",
+      "src/bot/capabilities/index.js",
+      "milestone_1 tool contracts"
+    ],
+    "outputs": [
+      "cobble capability",
+      "stone tools capability",
+      "parser and registry routes",
+      "capability-level tests"
+    ],
+    "dependencies": [],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_2",
+    "description": "Review the integrated phase 4 changes, run verification, and write milestone verification artifacts.",
+    "owner": "technomancer",
+    "inputs": [
+      "task_1 outputs",
+      "test results",
+      "docs/technomancy/runs/20260326-111455/**"
+    ],
+    "outputs": [
+      "verification artifacts",
+      "milestone review notes",
+      "manual verification checklist"
+    ],
+    "dependencies": [
+      "task_1"
+    ],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  }
+]

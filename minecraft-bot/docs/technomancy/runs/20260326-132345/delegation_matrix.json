@@ -1,0 +1,47 @@
+{
+  "run_id": "20260326-132345",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope_summary": "Lifecycle, shared state, status, cancellation, and observability hardening",
+      "parallelism": "contract-first, then same-tree implementation",
+      "status": "authorized"
+    },
+    {
+      "milestone_id": "milestone_2",
+      "owner": "high_technomancer",
+      "scope_summary": "Intent validation, router safety, deterministic status/cancel command surface, and regression verification",
+      "parallelism": "tactical planning may overlap milestone_1; code convergence depends on milestone_1 state contract",
+      "status": "authorized"
+    }
+  ],
+  "cross_milestone_contracts": [
+    {
+      "name": "task_lifecycle_snapshot",
+      "authority": "TaskManager",
+      "consumers": [
+        "helpers.statusSummary",
+        "status capability",
+        "chat router busy/refusal paths"
+      ]
+    },
+    {
+      "name": "last_failure_record",
+      "authority": "TaskManager/runtime state",
+      "consumers": [
+        "status output",
+        "what went wrong surface",
+        "structured logs"
+      ]
+    },
+    {
+      "name": "validated_intent_schema",
+      "authority": "intent-catalog normalization",
+      "consumers": [
+        "intent-router",
+        "chat-runtime"
+      ]
+    }
+  ]
+}

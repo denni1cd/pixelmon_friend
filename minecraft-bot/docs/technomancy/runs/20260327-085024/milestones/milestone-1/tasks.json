@@ -1,0 +1,20 @@
+[
+  {
+    "task_id": "m1-t1",
+    "description": "Expose a single tool runtime factory over the approved tool catalog.",
+    "owner": "technomancer",
+    "status": "completed"
+  },
+  {
+    "task_id": "m1-t2",
+    "description": "Extend shared state with objective and tool history metadata.",
+    "owner": "technomancer",
+    "status": "completed"
+  },
+  {
+    "task_id": "m1-t3",
+    "description": "Preserve capability compatibility through fallbacks and legacy command adapters.",
+    "owner": "technomancer",
+    "status": "completed"
+  }
+]

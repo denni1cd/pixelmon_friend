@@ -1,0 +1,47 @@
+[
+  {
+    "task_id": "task_1",
+    "description": "Implement the allowlisted intent schema, validation/normalization helpers, and LM Studio structured intent prompt/parse path.",
+    "owner": "technomancer",
+    "inputs": [
+      "docs/technomancy/runs/20260326-120406/contracts/index.md",
+      "src/bot/lm-studio.js",
+      "src/bot/command-parser.js"
+    ],
+    "outputs": [
+      "intent schema/allowlist module(s)",
+      "structured intent LM Studio helper path",
+      "unit coverage for validation and parse behavior"
+    ],
+    "dependencies": [],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_2",
+    "description": "Integrate exact-command-first natural-language routing into the chat loop and add regression and fallback verification.",
+    "owner": "technomancer",
+    "inputs": [
+      "task_1 intent schema and LM Studio contracts",
+      "src/bot/app.js",
+      "src/bot/capability-registry.js",
+      "test/**"
+    ],
+    "outputs": [
+      "router integration",
+      "fallback/refusal behavior",
+      "integration tests and milestone verification artifacts"
+    ],
+    "dependencies": [
+      "task_1"
+    ],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "run_id": "20260326-152752",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope_summary": "Wood stock inspection, maintenance workflow, maintenance mode, and bounded routing/tests",
+      "parallelism": "sequential feature work in one milestone",
+      "status": "implemented"
+    }
+  ],
+  "cross_milestone_contracts": [
+    {
+      "name": "wood_stock_summary",
+      "authority": "helpers/state",
+      "consumers": [
+        "check_wood_stock",
+        "maintain_wood",
+        "status output",
+        "idle maintenance timer"
+      ]
+    },
+    {
+      "name": "equipment_safe_deposit",
+      "authority": "resource-utils/helpers/deposit",
+      "consumers": [
+        "manual deposit",
+        "maintain_wood workflow"
+      ]
+    }
+  ]
+}

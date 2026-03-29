@@ -1,0 +1,38 @@
+{
+  "milestone-1": {
+    "inputs": [
+      "spec contract requirements",
+      "existing helpers, task-manager, state, capabilities"
+    ],
+    "outputs": [
+      "tool definitions",
+      "policy gate",
+      "runtime factory",
+      "shared state extensions",
+      "tool contract snapshots"
+    ]
+  },
+  "milestone-2": {
+    "inputs": [
+      "milestone-1 tool runtime",
+      "policy validation surface"
+    ],
+    "outputs": [
+      "objective runner",
+      "deterministic recovery policy",
+      "objective tests"
+    ]
+  },
+  "milestone-3": {
+    "inputs": [
+      "milestone-1 runtime",
+      "milestone-2 objective and recovery flow"
+    ],
+    "outputs": [
+      "MCP adapter",
+      "stdio MCP server",
+      "chat and maintenance rewiring",
+      "MCP tests"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "20260326-104913",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "tasks": [
+        "task_1: freeze crafting contracts and command routes",
+        "task_2: implement helper-layer crafting and placement logic",
+        "task_3: integrate capabilities, tests, and verification"
+      ],
+      "parallelism": "sequential",
+      "reason": "Parser, helpers, and capability wiring share the same files and are safer to integrate in order."
+    }
+  ]
+}

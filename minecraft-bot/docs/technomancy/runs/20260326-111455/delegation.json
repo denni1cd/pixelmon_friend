@@ -1,0 +1,47 @@
+{
+  "run_id": "20260326-111455",
+  "spec_path": "C:\\Users\\Zero\\python_projects\\ai\\pixelmon_friend\\minecraft-bot\\pixelmon_pal_phase4_tools_and_stone_spec.md",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope": [
+        "tool preference contract",
+        "wooden and stone tool crafting helpers",
+        "equip axe / equip pickaxe commands",
+        "command parser wiring for tool commands"
+      ],
+      "depends_on": [],
+      "deliverables": [
+        "shared supported-tool helper contract",
+        "tool crafting capability modules",
+        "equip capability modules",
+        "parser coverage for tool commands"
+      ],
+      "can_run_in_parallel": false,
+      "worktree_mode": "same-tree",
+      "isolation_notes": "Same-tree only. This milestone modifies shared helpers and parser behavior used by every downstream capability."
+    },
+    {
+      "milestone_id": "milestone_2",
+      "owner": "high_technomancer",
+      "scope": [
+        "cobblestone gather/deposit workflow",
+        "stone tools upgrade capability",
+        "regression verification and run summary"
+      ],
+      "depends_on": [
+        "milestone_1"
+      ],
+      "deliverables": [
+        "cobble workflow capability",
+        "stone tools upgrade capability",
+        "cobble loop and regression tests",
+        "verification artifacts and final summary"
+      ],
+      "can_run_in_parallel": false,
+      "worktree_mode": "same-tree",
+      "isolation_notes": "Same-tree sequential integration remains required because this milestone composes milestone_1 helpers and existing deposit/gather capabilities."
+    }
+  ]
+}

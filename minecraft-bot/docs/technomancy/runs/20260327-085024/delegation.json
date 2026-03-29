@@ -1,0 +1,45 @@
+{
+  "run_id": "20260327-085024",
+  "spec_path": "C:\\Users\\Zero\\python_projects\\ai\\pixelmon_friend\\minecraft-bot\\pixelmon_pal_mcp_architecture_spec.md",
+  "milestones": [
+    {
+      "id": "milestone-1",
+      "owner": "high_technomancer",
+      "scope": "Internal tool runtime, contracts, registry, policy, state extensions, migrated tool handlers",
+      "depends_on": [],
+      "parallel_after": [],
+      "isolation": {
+        "mode": "same-tree",
+        "reason": "Contract-first implementation executed sequentially in one workspace to avoid interface drift."
+      }
+    },
+    {
+      "id": "milestone-2",
+      "owner": "high_technomancer",
+      "scope": "Bounded objective loop and deterministic recovery",
+      "depends_on": [
+        "milestone-1"
+      ],
+      "parallel_after": [],
+      "isolation": {
+        "mode": "same-tree",
+        "reason": "Planner and recovery directly consume Milestone 1 contracts and stayed easier to verify in one tree."
+      }
+    },
+    {
+      "id": "milestone-3",
+      "owner": "high_technomancer",
+      "scope": "MCP adapter, stdio server, command/runtime rewiring, and regression coverage",
+      "depends_on": [
+        "milestone-1"
+      ],
+      "parallel_after": [
+        "milestone-2"
+      ],
+      "isolation": {
+        "mode": "same-tree",
+        "reason": "Late-stage rewiring touched shared runtime surfaces and was integrated directly after Milestone 2 stabilized."
+      }
+    }
+  ]
+}

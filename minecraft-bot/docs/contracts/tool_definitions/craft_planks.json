@@ -1,0 +1,69 @@
+{
+  "name": "craft_planks",
+  "description": "Craft planks from held logs.",
+  "category": "crafting",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 4
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned"
+  ],
+  "sideEffects": [
+    "inventory_change"
+  ],
+  "retryPolicy": {
+    "retryable": true,
+    "maxRetries": 1
+  },
+  "errorCodes": [
+    "INSUFFICIENT_MATERIALS",
+    "TASK_CANCELLED"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

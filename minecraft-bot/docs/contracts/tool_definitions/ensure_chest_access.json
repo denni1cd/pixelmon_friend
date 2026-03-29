@@ -1,0 +1,72 @@
+{
+  "name": "ensure_chest_access",
+  "description": "Ensure a reachable chest exists, crafting or placing one if needed.",
+  "category": "storage",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "remember": {
+        "type": "boolean",
+        "default": true
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned",
+    "world_accessible"
+  ],
+  "sideEffects": [
+    "movement",
+    "inventory_change",
+    "block_placement"
+  ],
+  "retryPolicy": {
+    "retryable": true,
+    "maxRetries": 1
+  },
+  "errorCodes": [
+    "INSUFFICIENT_MATERIALS",
+    "PATH_FAILED",
+    "TASK_CANCELLED"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

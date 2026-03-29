@@ -1,0 +1,96 @@
+{
+  "name": "deposit_items",
+  "description": "Deposit selected items into a nearby or remembered chest.",
+  "category": "storage",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "mode": {
+        "type": "string",
+        "enum": [
+          "all",
+          "wood",
+          "stone",
+          "equipment",
+          "resources"
+        ],
+        "default": "all"
+      },
+      "target": {
+        "type": "string",
+        "enum": [
+          "saved",
+          "nearby"
+        ],
+        "default": "saved"
+      },
+      "amount": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "ensureChest": {
+        "type": "boolean",
+        "default": false
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned",
+    "world_accessible"
+  ],
+  "sideEffects": [
+    "movement",
+    "inventory_change",
+    "container_access"
+  ],
+  "retryPolicy": {
+    "retryable": true,
+    "maxRetries": 1
+  },
+  "errorCodes": [
+    "NO_CHEST_SAVED",
+    "NO_CHEST_AVAILABLE",
+    "CHEST_UNREACHABLE",
+    "TASK_CANCELLED"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

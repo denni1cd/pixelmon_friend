@@ -1,0 +1,38 @@
+{
+  "run_id": "20260325-171018",
+  "milestone_order": [
+    "milestone_1",
+    "milestone_2"
+  ],
+  "matrix": [
+    {
+      "milestone_id": "milestone_1",
+      "primary_outputs": [
+        "runtime shell",
+        "command router",
+        "capability registry",
+        "task manager",
+        "preserved capability modules"
+      ],
+      "blocked_by": [],
+      "unlocks": [
+        "milestone_2"
+      ],
+      "parallelism_reasoning": "Milestone 2 depends on the concrete capability and task contracts created here, so parallel execution would create contract drift risk in a small shared codebase."
+    },
+    {
+      "milestone_id": "milestone_2",
+      "primary_outputs": [
+        "new worker capabilities",
+        "test suite expansion",
+        "verification notes",
+        "final integration evidence"
+      ],
+      "blocked_by": [
+        "milestone_1"
+      ],
+      "unlocks": [],
+      "parallelism_reasoning": "Execution remains same-tree and sequential because both milestones touch the runtime command surface and shared bot context."
+    }
+  ]
+}

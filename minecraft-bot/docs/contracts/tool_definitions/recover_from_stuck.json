@@ -1,0 +1,63 @@
+{
+  "name": "recover_from_stuck",
+  "description": "Stop active movement and reset deterministic movement state.",
+  "category": "recovery",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "reason": {
+        "type": "string",
+        "default": "stuck"
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [],
+  "sideEffects": [
+    "movement_reset"
+  ],
+  "retryPolicy": {
+    "retryable": false,
+    "maxRetries": 0
+  },
+  "errorCodes": [],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

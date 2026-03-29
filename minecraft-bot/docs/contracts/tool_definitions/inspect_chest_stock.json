@@ -1,0 +1,71 @@
+{
+  "name": "inspect_chest_stock",
+  "description": "Inspect remembered chest wood stock against a target threshold.",
+  "category": "observation",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "minimumChestWood": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 64
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned",
+    "saved_chest_known"
+  ],
+  "sideEffects": [
+    "container_access"
+  ],
+  "retryPolicy": {
+    "retryable": false,
+    "maxRetries": 0
+  },
+  "errorCodes": [
+    "NO_CHEST_SAVED",
+    "CHEST_MISSING",
+    "CHEST_UNREACHABLE"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

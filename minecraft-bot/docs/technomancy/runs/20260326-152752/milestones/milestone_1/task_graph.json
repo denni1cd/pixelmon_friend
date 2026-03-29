@@ -1,0 +1,34 @@
+{
+  "milestone_id": "milestone_1",
+  "tasks": [
+    {
+      "id": "task_1",
+      "summary": "Implement shared wood stock state/helpers and maintenance workflow capabilities",
+      "files": [
+        "src/bot/constants.js",
+        "src/bot/state.js",
+        "src/bot/helpers.js",
+        "src/bot/capabilities/check-wood-stock.js",
+        "src/bot/capabilities/maintain-wood.js",
+        "src/bot/capabilities/enable-wood-maintenance.js",
+        "src/bot/capabilities/disable-wood-maintenance.js",
+        "src/bot/capabilities/index.js"
+      ]
+    },
+    {
+      "id": "task_2",
+      "summary": "Integrate routing/scheduler behavior and add regression tests",
+      "files": [
+        "src/bot/app.js",
+        "src/bot/command-parser.js",
+        "src/bot/intent-catalog.js",
+        "src/bot/intent-router.js",
+        "src/bot/chat-runtime.js",
+        "test/command-parser.test.js",
+        "test/intent-routing.test.js",
+        "test/resource-loop-capabilities.test.js",
+        "test/status-capability.test.js"
+      ]
+    }
+  ]
+}

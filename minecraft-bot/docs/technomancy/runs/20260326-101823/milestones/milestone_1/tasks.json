@@ -1,0 +1,71 @@
+[
+  {
+    "task_id": "task_1",
+    "description": "Add runtime memory state plus parser and capability wiring for set/query/go-home chest-home commands.",
+    "owner": "technomancer",
+    "inputs": [
+      "pixelmon_pal_phase2_resource_loop_spec.md",
+      "src/bot/app.js",
+      "src/bot/command-parser.js",
+      "src/bot/capabilities/index.js"
+    ],
+    "outputs": [
+      "runtime state module or equivalent",
+      "new home/chest capability modules",
+      "parser coverage for state commands"
+    ],
+    "dependencies": [],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_2",
+    "description": "Implement remembered-chest resolution and deposit behavior while preserving legacy nearby deposit flows.",
+    "owner": "technomancer",
+    "inputs": [
+      "src/bot/helpers.js",
+      "src/bot/capabilities/deposit.js",
+      "state contract from task_1"
+    ],
+    "outputs": [
+      "helper support for saved chest lookup and validation",
+      "deposit capability support for remembered targets",
+      "unit coverage for deposit result behavior"
+    ],
+    "dependencies": [
+      "task_1"
+    ],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_3",
+    "description": "Implement composed wood run workflow, integrate tests, and record verification evidence.",
+    "owner": "technomancer",
+    "inputs": [
+      "capability contracts from tasks 1 and 2",
+      "src/bot/task-manager.js",
+      "test/**"
+    ],
+    "outputs": [
+      "wood run capability",
+      "workflow tests",
+      "verification artifacts and completion summary"
+    ],
+    "dependencies": [
+      "task_1",
+      "task_2"
+    ],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  }
+]

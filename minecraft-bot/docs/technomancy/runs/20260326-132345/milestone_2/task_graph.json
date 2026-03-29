@@ -1,0 +1,25 @@
+{
+  "milestone": "milestone_2",
+  "tasks": [
+    {
+      "id": "2.1",
+      "name": "intent validation and refusal hardening",
+      "depends_on": []
+    },
+    {
+      "id": "2.2",
+      "name": "chat router logging and exact-command surface expansion",
+      "depends_on": [
+        "2.1"
+      ]
+    },
+    {
+      "id": "2.3",
+      "name": "router and workflow regression verification",
+      "depends_on": [
+        "2.1",
+        "2.2"
+      ]
+    }
+  ]
+}

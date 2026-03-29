@@ -1,0 +1,26 @@
+{
+  "run_id": "20260326-111455",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope": [
+        "tool preference contract",
+        "wooden and stone tool crafting helpers",
+        "equip axe and equip pickaxe commands",
+        "parser and registry wiring"
+      ],
+      "status": "completed"
+    },
+    {
+      "milestone_id": "milestone_2",
+      "owner": "high_technomancer",
+      "scope": [
+        "cobblestone gather/deposit workflow",
+        "stone tools upgrade capability",
+        "regression verification and milestone documentation"
+      ],
+      "status": "completed"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "milestone": "milestone-2",
+  "tasks": [
+    {
+      "task_id": "m2-t1",
+      "description": "Implement bounded maintain-wood objective execution over the tool runtime.",
+      "depends_on": ["m1-t1", "m1-t2"]
+    },
+    {
+      "task_id": "m2-t2",
+      "description": "Implement deterministic recovery decisions and objective-level test coverage.",
+      "depends_on": ["m2-t1"]
+    }
+  ]
+}

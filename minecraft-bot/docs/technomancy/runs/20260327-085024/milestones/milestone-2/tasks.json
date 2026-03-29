@@ -1,0 +1,14 @@
+[
+  {
+    "task_id": "m2-t1",
+    "description": "Implement bounded maintain-wood objective execution.",
+    "owner": "technomancer",
+    "status": "completed"
+  },
+  {
+    "task_id": "m2-t2",
+    "description": "Implement deterministic recovery for chest and path failures.",
+    "owner": "technomancer",
+    "status": "completed"
+  }
+]

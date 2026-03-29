@@ -1,0 +1,33 @@
+{
+  "run_id": "20260326-120406",
+  "spec_path": "C:\\Users\\Zero\\python_projects\\ai\\pixelmon_friend\\minecraft-bot\\pixelmon_pal_phase5_llm_intent_spec.md",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope": [
+        "allowlisted action catalog and intent schema",
+        "LM Studio structured intent prompt and parse path",
+        "intent validation and normalization",
+        "chat-router classification and execution handoff",
+        "tests and verification artifacts"
+      ],
+      "depends_on": [],
+      "deliverables": [
+        "deterministic intent schema",
+        "allowlisted action catalog",
+        "LM Studio structured intent integration",
+        "validated router handoff into registry/task manager",
+        "automated verification and final run summary"
+      ],
+      "can_run_in_parallel": false,
+      "worktree_mode": "same-tree",
+      "isolation_notes": "Same-tree execution is lower risk because the schema, LM Studio client, and router logic overlap tightly in a small codebase.",
+      "recommended_task_slices": [
+        "Freeze action allowlist, argument schema, and refusal contract",
+        "Implement LM Studio structured intent prompting and parser/validator helpers",
+        "Integrate chat classification and add tests plus verification artifacts"
+      ]
+    }
+  ]
+}

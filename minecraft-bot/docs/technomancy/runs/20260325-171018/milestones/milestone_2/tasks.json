@@ -1,0 +1,26 @@
+{
+  "milestone_id": "milestone_2",
+  "tasks": [
+    {
+      "task_id": "task_1",
+      "title": "Implement Phase 1 worker capabilities on top of the new runtime contracts",
+      "outputs": [
+        "status capability",
+        "goto capability",
+        "stone capability",
+        "drop all capability"
+      ]
+    },
+    {
+      "task_id": "task_2",
+      "title": "Expand automated tests and write milestone verification evidence",
+      "outputs": [
+        "parser tests",
+        "registry tests",
+        "task-manager tests",
+        "capability smoke test",
+        "verification notes"
+      ]
+    }
+  ]
+}

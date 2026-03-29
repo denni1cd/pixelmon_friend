@@ -1,0 +1,15 @@
+{
+  "milestone": "milestone-1",
+  "tasks": [
+    {
+      "task_id": "m1-t1",
+      "description": "Implement tool definitions, schema validation, policy gating, and handlers.",
+      "depends_on": []
+    },
+    {
+      "task_id": "m1-t2",
+      "description": "Extend shared runtime state and add legacy command migration paths.",
+      "depends_on": ["m1-t1"]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "name": "craft_item",
+  "description": "Craft a supported core item or starter tool.",
+  "category": "crafting",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "itemName": {
+        "type": "string",
+        "enum": [
+          "crafting_table",
+          "chest",
+          "oak_planks",
+          "stick",
+          "wooden_axe",
+          "wooden_pickaxe",
+          "stone_axe",
+          "stone_pickaxe"
+        ]
+      },
+      "amount": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 1
+      }
+    },
+    "required": [
+      "itemName"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned",
+    "world_accessible"
+  ],
+  "sideEffects": [
+    "inventory_change",
+    "container_access",
+    "movement"
+  ],
+  "retryPolicy": {
+    "retryable": true,
+    "maxRetries": 1
+  },
+  "errorCodes": [
+    "INSUFFICIENT_MATERIALS",
+    "TASK_CANCELLED",
+    "UNSUPPORTED_CRAFT"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

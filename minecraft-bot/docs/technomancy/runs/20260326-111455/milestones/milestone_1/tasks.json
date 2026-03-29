@@ -1,0 +1,45 @@
+[
+  {
+    "task_id": "task_1",
+    "description": "Stabilize shared tool contracts and add explicit tool craft/equip capability modules.",
+    "owner": "high_technomancer",
+    "inputs": [
+      "src/bot/helpers.js",
+      "src/bot/resource-utils.js",
+      "src/bot/capabilities/**"
+    ],
+    "outputs": [
+      "tool craft capability modules",
+      "equip capability modules",
+      "registry wiring"
+    ],
+    "dependencies": [],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_2",
+    "description": "Add parser and automated test coverage for the milestone 1 tool command surface.",
+    "owner": "high_technomancer",
+    "inputs": [
+      "src/bot/command-parser.js",
+      "test/command-parser.test.js",
+      "test/crafting-capabilities.test.js"
+    ],
+    "outputs": [
+      "parser support for tool commands",
+      "tool preference and equip tests"
+    ],
+    "dependencies": [
+      "task_1"
+    ],
+    "may_run_in_parallel": false,
+    "validation_steps": [
+      "npm test"
+    ],
+    "status": "completed"
+  }
+]

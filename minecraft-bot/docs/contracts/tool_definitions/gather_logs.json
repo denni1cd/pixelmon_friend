@@ -1,0 +1,85 @@
+{
+  "name": "gather_logs",
+  "description": "Gather nearby reachable logs.",
+  "category": "resource",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "targetCount": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 8
+      },
+      "searchRadius": {
+        "type": "integer",
+        "minimum": 1,
+        "default": 32
+      },
+      "preferredLogTypes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [
+    "bot_spawned",
+    "world_accessible"
+  ],
+  "sideEffects": [
+    "movement",
+    "block_breaking",
+    "inventory_change"
+  ],
+  "retryPolicy": {
+    "retryable": true,
+    "maxRetries": 1
+  },
+  "errorCodes": [
+    "NO_LOGS_FOUND",
+    "PATH_FAILED",
+    "INVENTORY_FULL",
+    "TASK_CANCELLED"
+  ],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

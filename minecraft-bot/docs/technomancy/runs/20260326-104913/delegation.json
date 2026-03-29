@@ -1,0 +1,27 @@
+{
+  "run_id": "20260326-104913",
+  "spec_path": "C:\\Users\\Zero\\python_projects\\ai\\pixelmon_friend\\minecraft-bot\\pixelmon_pal_phase3_crafting_spec.md",
+  "milestones": [
+    {
+      "milestone_id": "milestone_1",
+      "owner": "high_technomancer",
+      "scope": [
+        "crafting parser routes",
+        "recipe-driven helper additions",
+        "crafting and placement capabilities",
+        "intentional chest-memory updates",
+        "tests and verification artifacts"
+      ],
+      "depends_on": [],
+      "deliverables": [
+        "new crafting capabilities",
+        "helper-layer crafting primitives",
+        "parser and capability tests",
+        "verification and completion artifacts"
+      ],
+      "can_run_in_parallel": false,
+      "worktree_mode": "same-tree",
+      "isolation_notes": "A single same-tree milestone is lower risk because helpers, parser routes, capabilities, and regression tests all touch the same surfaces."
+    }
+  ]
+}

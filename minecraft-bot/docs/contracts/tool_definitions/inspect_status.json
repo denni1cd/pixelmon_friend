@@ -1,0 +1,56 @@
+{
+  "name": "inspect_status",
+  "description": "Report current runtime status, remembered anchors, and task state.",
+  "category": "observation",
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "ok": {
+        "type": "boolean"
+      },
+      "status": {
+        "type": "string"
+      },
+      "toolName": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "data": {
+        "type": "object"
+      },
+      "observation": {
+        "type": "object"
+      },
+      "errorCode": {
+        "type": "string"
+      },
+      "retryable": {
+        "type": "boolean"
+      },
+      "sideEffects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "metrics": {
+        "type": "object"
+      }
+    }
+  },
+  "preconditions": [],
+  "sideEffects": [],
+  "retryPolicy": {
+    "retryable": false,
+    "maxRetries": 0
+  },
+  "errorCodes": [],
+  "estimatedCost": null,
+  "estimatedDurationMs": null
+}

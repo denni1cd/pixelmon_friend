@@ -1,0 +1,16 @@
+[
+  {
+    "task_id": "task_1",
+    "description": "Tool craft/equip capability wiring",
+    "depends_on": [],
+    "status": "completed"
+  },
+  {
+    "task_id": "task_2",
+    "description": "Parser and verification coverage",
+    "depends_on": [
+      "task_1"
+    ],
+    "status": "completed"
+  }
+]
